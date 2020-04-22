@@ -1,0 +1,2 @@
+# djangogirls-tutorial
+Django Girlsチュートリアルをやってみた際のソースコードを置いているリポジトリです。
