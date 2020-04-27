@@ -1,8 +1,8 @@
 FROM amazonlinux:2
 
-ENV DEPLOY_DIR /root/djangogirls-tutorial
-
 LABEL  maintainer "kamatimaru"
+
+ENV DEPLOY_DIR /root/djangogirls-tutorial
 
 RUN yum -y update && yum clean all
 
