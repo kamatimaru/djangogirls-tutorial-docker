@@ -1,6 +1,6 @@
 FROM amazonlinux:2
 
-LABEL  maintainer "kamatimaru"
+LABEL maintainer "kamatimaru"
 
 ENV DEPLOY_DIR /root/djangogirls-tutorial
 
@@ -13,3 +13,5 @@ WORKDIR ${DEPLOY_DIR}
 ADD requirements.txt requirements.txt
 
 RUN pip3 install -r requirements.txt
+
+EXPOSE 8000
