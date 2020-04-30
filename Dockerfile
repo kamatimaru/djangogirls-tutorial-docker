@@ -17,4 +17,6 @@ ADD requirements.txt requirements.txt
 
 RUN pip3 install -r requirements.txt
 
+ENTRYPOINT /bin/bash ${DEPLOY_DIR}/docker-entrypoint.sh
+
 EXPOSE 8000
