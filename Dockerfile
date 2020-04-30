@@ -8,6 +8,9 @@ RUN yum -y update && yum clean all
 
 RUN yum install -y python3
 
+# 以下はmysqlclientのインストールに必要
+RUN yum install -y python3-devel mysql mysql-devel gcc
+
 WORKDIR ${DEPLOY_DIR}
 
 ADD requirements.txt requirements.txt

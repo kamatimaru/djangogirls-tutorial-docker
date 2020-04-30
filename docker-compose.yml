@@ -1,0 +1,18 @@
+my-djangogirls-tutorial:
+    build: .
+    ports:
+        - "8000:8000"
+    links:
+        - "db_server:mysql"
+    volumes:
+        - $PWD:/root/djangogirls-tutorial
+    tty: true
+
+db_server:
+    image: kamatimaru/mysql57-ja:latest
+    ports: 
+        - "3306:3306"
+    environment: 
+        MYSQL_ROOT_PASSWORD: password
+
+
