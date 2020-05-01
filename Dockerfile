@@ -11,6 +11,10 @@ RUN yum install -y python3
 # 以下はmysqlclientのインストールに必要
 RUN yum install -y python3-devel mysql mysql-devel gcc
 
+# コンテナ起動時にDjangoのcreatesuperuserを実行してadminユーザーを作成する。
+# createsuperuserは対話モードで実行されるため、自動化するためにexpectが必要
+RUN yum install -y expect
+
 WORKDIR ${DEPLOY_DIR}
 
 ADD requirements.txt requirements.txt
