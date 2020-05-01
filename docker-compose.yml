@@ -4,6 +4,7 @@ my-djangogirls-tutorial:
         - "8000:8000"
     links:
         - "db_server:mysql"
+        - "cache_server:redis"
     volumes:
         - $PWD:/root/djangogirls-tutorial
     tty: true
@@ -15,5 +16,10 @@ db_server:
     environment: 
         MYSQL_ROOT_PASSWORD: password
         MYSQL_DATABASE: djangogirls
+
+cache_server:
+    image: redis:6
+    ports:
+        - "6379:6379"
 
 
