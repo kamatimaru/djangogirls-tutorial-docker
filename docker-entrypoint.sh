@@ -9,7 +9,7 @@ expect \"Password:\"
 send \"password\n\"
 expect \"Password (again):\"
 send \"password\n\"
-expect \"Bypass password validation and create user anyway? \[y/N\]:\"
+expect \"Bypass password validation and create user anyway? \\\\\[y/N\\\\\]:\"
 send \"y\n\"
 expect \"Superuser created successfully.\"
 exit 0
