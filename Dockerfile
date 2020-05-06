@@ -6,9 +6,16 @@ ENV DEPLOY_DIR /root/djangogirls-tutorial
 
 RUN yum -y update && yum clean all
 
+# 以下はリモートでVS Codeを実行するために必要
+RUN yum install -y tar
+
+# 以下はリモートでVS CodeでGitを実行するために必要
+RUN yum install -y git
+
+# Python3をインストール
 RUN yum install -y python3
 
-# 以下はmysqlclientのインストールに必要
+# 以下はmysqlclient(Python)のインストールに必要
 RUN yum install -y python3-devel mysql mysql-devel gcc
 
 # コンテナ起動時にDjangoのcreatesuperuserを実行してadminユーザーを作成する。
