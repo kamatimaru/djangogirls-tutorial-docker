@@ -4,13 +4,21 @@ LABEL maintainer "kamatimaru"
 
 ENV DEPLOY_DIR /root/djangogirls-tutorial
 
-RUN yum -y update && yum clean all
+RUN yum update -y && yum clean all
 
-# 以下はリモートでVS Codeを実行するために必要
+# ロケールを日本語に設定する。
+# 設定しておかないと、expectコマンドで日本語がヒットしない。
+RUN yum install -y glibc-langpack-ja
+ENV LANG ja_JP.UTF-8
+
+# リモートでVS Codeを実行するために必要
 RUN yum install -y tar
 
-# 以下はリモートでVS CodeでGitを実行するために必要
+# リモートでVS CodeでGitを実行するために必要
 RUN yum install -y git
+
+# psコマンドを使えないとコンテナ内で調査するときに困るのでインストールしておく。
+RUN yum install -y procps
 
 # Python3をインストール
 RUN yum install -y python3
