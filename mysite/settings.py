@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+
 import environ
+
 env = environ.Env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -83,7 +85,7 @@ DATABASES = {
         "USER": "root",
         "PASSWORD": "password",
         "HOST": env("MYSQL_PORT_3306_TCP_ADDR"),
-        "PORT": "3306"
+        "PORT": "3306",
     }
 }
 
@@ -125,9 +127,7 @@ CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://" + env("REDIS_PORT_6379_TCP_ADDR") + ":6379",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
+        "OPTIONS": {"CLIENT_CLASS": "django_redis.client.DefaultClient",},
     }
 }
 
