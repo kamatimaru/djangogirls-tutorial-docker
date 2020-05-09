@@ -1,0 +1,68 @@
+{
+    "name": "djangogirls-tutorial-docker",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "my-djangogirls-tutorial",
+    "context": "..",
+    "workspaceFolder": "/root/djangogirls-tutorial",
+    "appPort": [
+        8000
+    ],
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.cursorSurroundingLinesStyle": "all",
+        "editor.formatOnSave": true,
+        "editor.tabCompletion": "on",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "workbench.startupEditor": "newUntitledFile",
+        "git.suggestSmartCommit": false,
+        "files.autoSave": "onFocusChange",
+        "files.exclude": {
+            "**/.mypy_cache": true,
+        },
+        "git.untrackedChanges": "separate",
+        "csscomb.preset": {},
+        "todo-tree.tree.showScanModeButton": false,
+        "python.pythonPath": "python3",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": false,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "python.linting.mypyEnabled": true,
+        "python.formatting.blackPath": "black",
+        "python.linting.flake8Path": "flake8",
+        "python.linting.mypyPath": "mypy",
+        "autoDocstring.startOnNewLine": true,
+        "autoDocstring.docstringFormat": "sphinx",
+    },
+    // Add the IDs of extensions you want installed when the container is created.
+    "extensions": [
+        //"donjayamanne.githistory",
+        //"eamodio.gitlens",
+        //"Gruntfuggly.todo-tree",
+        //"jebbs.plantuml",
+        //"mechatroner.rainbow-csv",
+        //"mrmlnc.vscode-csscomb",
+        //"ms-azuretools.vscode-docker",
+        "MS-CEINTL.vscode-language-pack-ja",
+        "ms-python.python",
+        //"ms-vscode-remote.remote-containers",
+        //"ms-vscode-remote.remote-ssh",
+        //"ms-vscode-remote.remote-ssh-edit",
+        //"ms-vscode-remote.remote-wsl",
+        //"ms-vscode-remote.vscode-remote-extensionpack",
+        //"njpwerner.autodocstring",
+        //"oderwat.indent-rainbow",
+        //"streetsidesoftware.code-spell-checker",
+        //"thebarkman.vscode-djaneiro",
+        //"wmaurer.change-case",
+    ]
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    // "forwardPorts": [],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    // "postCreateCommand": "pip3 install --user -r requirements.txt",
+    // Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+    // "remoteUser": "vscode"
+}
